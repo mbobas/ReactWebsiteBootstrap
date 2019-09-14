@@ -1,4 +1,21 @@
 import React, { Component} from 'react';
+import Field from '../Common/Field';
+
+//two arrays in one object
+const  fields = {
+    sections: [
+                [ 
+                    {name: 'name', elementName: 'input', type: 'text', placeholder: 'Your name*'},
+                    {name: 'email', elementName: 'input', type: 'email', placeholder: 'Your email*'},
+                    {name: 'phone', elementName: 'input', type: 'text', placeholder: 'Your phone number*'},
+                ],
+                [
+                    {name: 'message', elementName: 'textarea', type: 'text', placeholder: 'Type your message*'}
+                ]
+            ]
+} 
+
+
 
 
 class Contact extends Component {
@@ -14,6 +31,10 @@ class Contact extends Component {
 
     }
 
+    submitForm = (e) => {
+        e.preventDefault();
+        alert("Form Submitted. Thank you very much!");
+    }
 
     render(){
         return(
@@ -28,65 +49,36 @@ class Contact extends Component {
             </div>
             <div className="row">
                 <div className="col-lg-12">
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form name="sentMessage" novalidate="novalidate" onSubmit={e => this.submitForm(e)}>
                     <div className="row">
-                    <div className="col-md-6">
-                        <div className="form-group">
-                        <input 
-                            className="form-control" 
-                            id="name" type="text" 
-                            placeholder="Your Name *" 
-                            required="required" 
-                            data-validation-required-message="Please enter your name."
-                            value={this.state.name}
-                            onChange={e => this.setState({name: e.target.value})}
-                        />
-                        <p className="help-block text-danger"></p>
-                        </div>
-                        <div className="form-group">
-                            <input 
-                                className="form-control" 
-                                id="email" type="email" 
-                                placeholder="Your Email *" 
-                                required="required" 
-                                data-validation-required-message="Please enter your email address." 
-                                value={this.state.email}
-                                onChange={e => this.setState({email: e.target.value})}
-                            />
-                        <p className="help-block text-danger"></p>
-                        </div>
-                        <div className="form-group">
-                            <input 
-                                className="form-control" 
-                                id="phone" type="tel" 
-                                placeholder="Your Phone *" 
-                                required="required" 
-                                data-validation-required-message="Please enter your phone number."
-                                value={this.state.phone}
-                                onChange={e => this.setState({phone: e.target.value})}
-                            />
-                        <p className="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="form-group">
-                            <textarea
-                                className="form-control" 
-                                id="message" 
-                                placeholder="Your Message *" 
-                                required="required" 
-                                data-validation-required-message="Please enter a message."
-                                value={this.state.message}
-                                onChange={e => this.setState({message: e.target.value})}
 
+                   {fields.sections.map((section, sectionIndex) => {
+                       console.log("Rendering section", sectionIndex, "with", section);
+                       return (
+                            <div className="col-md-6" key={sectionIndex}>
+                            {section.map((field, i) => {
+                                return <Field 
+                                {...field} 
+                                key={i} 
+                                value={this.state[field.name]}
+                                onChange={e => this.setState({
+                                    [field.name]: e.target.value})}
                                 />
-                        <p className="help-block text-danger"></p>
-                        </div>
-                    </div>
+
+                            })}
+                            </div>
+                       )
+                   })}
+
                     <div className="clearfix"></div>
                     <div className="col-lg-12 text-center">
                         <div id="success"></div>
-                        <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                        <button 
+                        id="sendMessageButton" 
+                        className="btn btn-primary btn-xl text-uppercase" 
+                        type="submit"
+                        
+                        >Send Message</button>
                     </div>
                     </div>
                 </form>
