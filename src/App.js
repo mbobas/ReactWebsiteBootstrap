@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import PageWrapper from './components/PageWrapper';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-
+import {BrowserRouter as Router, Route, } from 'react-router-dom';
+//import {Link } from 'react-router-dom';
 
 //Pages
 import Home from './components/Pages/Home';
