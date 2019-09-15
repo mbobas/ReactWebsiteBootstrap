@@ -34,7 +34,7 @@ class Field extends Component {
                 }
                 <p className="help-block text-danger"></p>
                 {(this.props.touched && this.props.errors) &&
-                <span>{this.props.errors}</span>
+                <span className="span-contact">{this.props.errors}</span>
                 }
             </div>
 
