@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ReactWebsiteBootstrap/static/css/main.5a1b64fe.chunk.css",
+    "main.js": "/ReactWebsiteBootstrap/static/js/main.d467709c.chunk.js",
+    "main.js.map": "/ReactWebsiteBootstrap/static/js/main.d467709c.chunk.js.map",
+    "runtime~main.js": "/ReactWebsiteBootstrap/static/js/runtime~main.977e0470.js",
+    "runtime~main.js.map": "/ReactWebsiteBootstrap/static/js/runtime~main.977e0470.js.map",
+    "static/js/2.408624d5.chunk.js": "/ReactWebsiteBootstrap/static/js/2.408624d5.chunk.js",
+    "static/js/2.408624d5.chunk.js.map": "/ReactWebsiteBootstrap/static/js/2.408624d5.chunk.js.map",
+    "index.html": "/ReactWebsiteBootstrap/index.html",
+    "precache-manifest.db34ce4c96c5ba5300e54e03eb3e1df3.js": "/ReactWebsiteBootstrap/precache-manifest.db34ce4c96c5ba5300e54e03eb3e1df3.js",
+    "service-worker.js": "/ReactWebsiteBootstrap/service-worker.js",
+    "static/css/main.5a1b64fe.chunk.css.map": "/ReactWebsiteBootstrap/static/css/main.5a1b64fe.chunk.css.map",
+    "static/media/01-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/01-thumbnail.eda45981.jpg",
+    "static/media/02-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/02-thumbnail.e52270b3.jpg",
+    "static/media/03-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/03-thumbnail.09c41872.jpg",
+    "static/media/04-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/04-thumbnail.80c8ff5c.jpg",
+    "static/media/05-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/05-thumbnail.68d8d949.jpg",
+    "static/media/06-thumbnail.jpg": "/ReactWebsiteBootstrap/static/media/06-thumbnail.20456fff.jpg",
+    "static/media/1.jpg": "/ReactWebsiteBootstrap/static/media/1.e25053c4.jpg",
+    "static/media/2.jpg": "/ReactWebsiteBootstrap/static/media/2.7006d696.jpg",
+    "static/media/3.jpg": "/ReactWebsiteBootstrap/static/media/3.838cdb86.jpg",
+    "static/media/a.jpg": "/ReactWebsiteBootstrap/static/media/a.5523d594.jpg",
+    "static/media/header-bg.jpg": "/ReactWebsiteBootstrap/static/media/header-bg.e2d2a51c.jpg"
+  }
+}
